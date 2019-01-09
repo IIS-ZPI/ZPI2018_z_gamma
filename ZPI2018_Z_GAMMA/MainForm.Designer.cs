@@ -70,7 +70,6 @@
             this.label1.Size = new System.Drawing.Size(161, 48);
             this.label1.TabIndex = 2;
             this.label1.Text = "Waluty:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -81,7 +80,6 @@
             this.label2.Size = new System.Drawing.Size(280, 48);
             this.label2.TabIndex = 4;
             this.label2.Text = "Zakres czasu:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Czas
             // 
@@ -122,7 +120,6 @@
             this.label3.Size = new System.Drawing.Size(381, 48);
             this.label3.TabIndex = 6;
             this.label3.Text = "Dostępne operacje:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Mediana
             // 
@@ -187,6 +184,7 @@
             this.RozkladCzestosci.TabStop = true;
             this.RozkladCzestosci.Text = "Rozkład częstości zmian tygodniowych dla wybranych par walut";
             this.RozkladCzestosci.UseVisualStyleBackColor = true;
+            this.RozkladCzestosci.CheckedChanged += new System.EventHandler(this.RozkladCzestosci_CheckedChanged);
             // 
             // button1
             // 

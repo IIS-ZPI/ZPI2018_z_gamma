@@ -17,45 +17,7 @@ namespace ZPI2018_Z_GAMMA
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Mediana_CheckedChanged(object sender, EventArgs e)
         {
@@ -93,6 +55,11 @@ namespace ZPI2018_Z_GAMMA
         }
 
         private void Czas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RozkladCzestosci_CheckedChanged(object sender, EventArgs e)
         {
 
         }
