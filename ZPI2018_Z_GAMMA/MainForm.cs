@@ -55,12 +55,13 @@ namespace ZPI2018_Z_GAMMA
                 MessageBoxDefaultButton.Button1);
                 return;
             }
-
+            /*
             MessageBox.Show("WybranaOperacja " + WybranaOperacja + " CzasZakres " + CzasZakres + " Waluta " + WalutaA,
                 "Wybrane Parametry",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Exclamation,
                 MessageBoxDefaultButton.Button1);
+                */
             return;
         }
 
