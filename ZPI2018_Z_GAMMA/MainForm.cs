@@ -65,12 +65,12 @@ namespace ZPI2018_Z_GAMMA
 
         private void Waluta2_SelectedIndexChanged(object sender, EventArgs e)
         {
-             WalutaB = Waluta.GetItemText(Waluta2.SelectedItem);
+             WalutaB = Waluta2.GetItemText(Waluta2.SelectedItem);
         }
 
         private void Czas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CzasZakres = Waluta.GetItemText(Waluta2.SelectedItem);
+            CzasZakres = Czas.GetItemText(Czas.SelectedItem);
         }
 
 
