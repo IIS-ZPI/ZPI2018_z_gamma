@@ -63,5 +63,11 @@ namespace ZPI2018_Z_GAMMA
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Funkcje f = new Funkcje();
+            f.myMessage("ssss");
+        }
     }
 }
