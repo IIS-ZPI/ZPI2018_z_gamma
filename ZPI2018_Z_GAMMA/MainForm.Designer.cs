@@ -38,7 +38,7 @@
             this.Mediana = new System.Windows.Forms.RadioButton();
             this.Dominata = new System.Windows.Forms.RadioButton();
             this.OdchylenieStd = new System.Windows.Forms.RadioButton();
-            this.WspolczynnikZminnosci = new System.Windows.Forms.RadioButton();
+            this.WspolczynnikZmiennosci = new System.Windows.Forms.RadioButton();
             this.RozkladCzestosci = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -50,7 +50,7 @@
             this.Waluta2.Name = "Waluta2";
             this.Waluta2.Size = new System.Drawing.Size(132, 24);
             this.Waluta2.TabIndex = 0;
-            this.Waluta2.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Waluta2.SelectedIndexChanged += new System.EventHandler(this.Waluta2_SelectedIndexChanged);
             // 
             // Waluta
             // 
@@ -59,6 +59,7 @@
             this.Waluta.Name = "Waluta";
             this.Waluta.Size = new System.Drawing.Size(132, 24);
             this.Waluta.TabIndex = 1;
+            this.Waluta.SelectedIndexChanged += new System.EventHandler(this.Waluta_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -96,7 +97,7 @@
             this.Czas.Name = "Czas";
             this.Czas.Size = new System.Drawing.Size(263, 24);
             this.Czas.TabIndex = 3;
-            this.Czas.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            this.Czas.SelectedIndexChanged += new System.EventHandler(this.Czas_SelectedIndexChanged);
             // 
             // Sesje
             // 
@@ -110,7 +111,7 @@
             this.Sesje.Text = "Wyznaczenie ilości sesji wzrostowych, spadkowych i bez zmian  dla wybranej  walut" +
     "y i zakresu czasu";
             this.Sesje.UseVisualStyleBackColor = true;
-            this.Sesje.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.Sesje.CheckedChanged += new System.EventHandler(this.Sesje_CheckedChanged);
             // 
             // label3
             // 
@@ -134,6 +135,7 @@
             this.Mediana.TabStop = true;
             this.Mediana.Text = "Mediana  dla wybranej  waluty i zakresu czasu";
             this.Mediana.UseVisualStyleBackColor = true;
+            this.Mediana.CheckedChanged += new System.EventHandler(this.Mediana_CheckedChanged);
             // 
             // Dominata
             // 
@@ -146,7 +148,7 @@
             this.Dominata.TabStop = true;
             this.Dominata.Text = "Dominata  dla wybranej  waluty i zakresu czasu";
             this.Dominata.UseVisualStyleBackColor = true;
-            this.Dominata.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.Dominata.CheckedChanged += new System.EventHandler(this.Dominata_CheckedChanged);
             // 
             // OdchylenieStd
             // 
@@ -159,19 +161,20 @@
             this.OdchylenieStd.TabStop = true;
             this.OdchylenieStd.Text = "Odchylenie standardowe dla wybranej  waluty i zakresu czasu";
             this.OdchylenieStd.UseVisualStyleBackColor = true;
-            this.OdchylenieStd.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.OdchylenieStd.CheckedChanged += new System.EventHandler(this.OdchylenieStd_CheckedChanged);
             // 
-            // WspolczynnikZminnosci
+            // WspolczynnikZmiennosci
             // 
-            this.WspolczynnikZminnosci.AutoSize = true;
-            this.WspolczynnikZminnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.WspolczynnikZminnosci.Location = new System.Drawing.Point(39, 348);
-            this.WspolczynnikZminnosci.Name = "WspolczynnikZminnosci";
-            this.WspolczynnikZminnosci.Size = new System.Drawing.Size(577, 29);
-            this.WspolczynnikZminnosci.TabIndex = 10;
-            this.WspolczynnikZminnosci.TabStop = true;
-            this.WspolczynnikZminnosci.Text = "Współczynnik zmienności dla wybranej  waluty i zakresu czasu";
-            this.WspolczynnikZminnosci.UseVisualStyleBackColor = true;
+            this.WspolczynnikZmiennosci.AutoSize = true;
+            this.WspolczynnikZmiennosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.WspolczynnikZmiennosci.Location = new System.Drawing.Point(39, 348);
+            this.WspolczynnikZmiennosci.Name = "WspolczynnikZmiennosci";
+            this.WspolczynnikZmiennosci.Size = new System.Drawing.Size(577, 29);
+            this.WspolczynnikZmiennosci.TabIndex = 10;
+            this.WspolczynnikZmiennosci.TabStop = true;
+            this.WspolczynnikZmiennosci.Text = "Współczynnik zmienności dla wybranej  waluty i zakresu czasu";
+            this.WspolczynnikZmiennosci.UseVisualStyleBackColor = true;
+            this.WspolczynnikZmiennosci.CheckedChanged += new System.EventHandler(this.WspolczynnikZmiennosci_CheckedChanged);
             // 
             // RozkladCzestosci
             // 
@@ -184,7 +187,6 @@
             this.RozkladCzestosci.TabStop = true;
             this.RozkladCzestosci.Text = "Rozkład częstości zmian tygodniowych dla wybranych par walut";
             this.RozkladCzestosci.UseVisualStyleBackColor = true;
-            this.RozkladCzestosci.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
             // 
             // button1
             // 
@@ -203,7 +205,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.RozkladCzestosci);
-            this.Controls.Add(this.WspolczynnikZminnosci);
+            this.Controls.Add(this.WspolczynnikZmiennosci);
             this.Controls.Add(this.OdchylenieStd);
             this.Controls.Add(this.Dominata);
             this.Controls.Add(this.Mediana);
@@ -234,7 +236,7 @@
         private System.Windows.Forms.RadioButton Mediana;
         private System.Windows.Forms.RadioButton Dominata;
         private System.Windows.Forms.RadioButton OdchylenieStd;
-        private System.Windows.Forms.RadioButton WspolczynnikZminnosci;
+        private System.Windows.Forms.RadioButton WspolczynnikZmiennosci;
         private System.Windows.Forms.RadioButton RozkladCzestosci;
         private System.Windows.Forms.Button button1;
     }

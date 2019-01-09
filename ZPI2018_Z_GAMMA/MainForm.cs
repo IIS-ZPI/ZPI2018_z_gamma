@@ -37,11 +37,6 @@ namespace ZPI2018_Z_GAMMA
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -58,6 +53,46 @@ namespace ZPI2018_Z_GAMMA
         }
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Mediana_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dominata_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sesje_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OdchylenieStd_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WspolczynnikZmiennosci_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Waluta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Waluta2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Czas_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
