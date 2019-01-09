@@ -45,6 +45,23 @@ namespace ZPI2018_Z_GAMMA
                 MessageBoxDefaultButton.Button1);
                 return;
             }
+
+            if (WybranaOperacja == "ROZKLAD" && (WalutaA=="" || WalutaB==""))
+            {
+                MessageBox.Show("Wybierz dwie waluty",
+                "Wybierz Parametry",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button1);
+                return;
+            }
+
+            MessageBox.Show("WybranaOperacja " + WybranaOperacja + " CzasZakres " + CzasZakres + " Waluta " + WalutaA,
+                "Wybrane Parametry",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button1);
+            return;
         }
 
         private void Mediana_CheckedChanged(object sender, EventArgs e)
