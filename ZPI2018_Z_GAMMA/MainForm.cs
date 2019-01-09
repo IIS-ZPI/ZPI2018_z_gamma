@@ -36,5 +36,30 @@ namespace ZPI2018_Z_GAMMA
         {
 
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
