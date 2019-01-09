@@ -11,13 +11,11 @@ namespace ZPI2018_Z_GAMMA
     {
         public void myMessage(string v)
         {
-            MessageBox.Show("Dot Net Perls is super.",
+            MessageBox.Show(v,
               "Important Note",
               MessageBoxButtons.OK,
               MessageBoxIcon.Exclamation,
               MessageBoxDefaultButton.Button1); 
-
-
         }
 
     }

@@ -17,57 +17,67 @@ namespace ZPI2018_Z_GAMMA
             InitializeComponent();
         }
 
-
+        string WybranaOperacja = "";
+        string WalutaA = "";
+        string WalutaB = "";
+        string CzasZakres = "";
 
         private void Mediana_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (Mediana.Checked)
+                WybranaOperacja = "MEDIANA";
         }
 
         private void Dominata_CheckedChanged(object sender, EventArgs e)
         {
+            if(Dominata.Checked)
+                WybranaOperacja = "DOMINATA"; 
 
         }
 
         private void Sesje_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (Sesje.Checked)
+                WybranaOperacja = "SESJE";
         }
 
         private void OdchylenieStd_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (OdchylenieStd.Checked)
+                WybranaOperacja = "ODCHYLENIESTD";
         }
 
         private void WspolczynnikZmiennosci_CheckedChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void Waluta_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Waluta2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Czas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            if (OdchylenieStd.Checked)
+                WybranaOperacja = "WSPOLZMIEN";
         }
 
         private void RozkladCzestosci_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (RozkladCzestosci.Checked)
+                WybranaOperacja = "WSPOLZMIEN";
         }
+        private void Waluta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+             WalutaA = Waluta.GetItemText(Waluta.SelectedItem);
+        }
+
+        private void Waluta2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+             WalutaB = Waluta.GetItemText(Waluta2.SelectedItem);
+        }
+
+        private void Czas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CzasZakres = Waluta.GetItemText(Waluta2.SelectedItem);
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             Funkcje f = new Funkcje();
-            f.myMessage("ssss");
+            f.myMessage(WybranaOperacja + " " + WalutaA + " " + CzasZakres);
         }
     }
 }
