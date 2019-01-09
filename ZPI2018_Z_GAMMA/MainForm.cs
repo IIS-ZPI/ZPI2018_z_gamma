@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace ZPI2018_Z_GAMMA
 {
+   
+
     public partial class MainForm : Form
     {
         public MainForm()
@@ -21,6 +23,29 @@ namespace ZPI2018_Z_GAMMA
         string WalutaA = "";
         string WalutaB = "";
         string CzasZakres = "";
+
+        private void ProcessChoice()
+        {
+            if(CzasZakres == "" && WybranaOperacja != "ROZKLAD")
+            {
+                 MessageBox.Show("Wybierz zakres czasu",
+                 "Wybierz Parametry",
+                 MessageBoxButtons.OK,
+                 MessageBoxIcon.Exclamation,
+                 MessageBoxDefaultButton.Button1);
+                return;
+            }
+
+            if (WybranaOperacja == "")
+            {
+                MessageBox.Show("Wybierz operacje do wykonania",
+                "Wybierz Parametry",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button1);
+                return;
+            }
+        }
 
         private void Mediana_CheckedChanged(object sender, EventArgs e)
         {
@@ -49,14 +74,14 @@ namespace ZPI2018_Z_GAMMA
 
         private void WspolczynnikZmiennosci_CheckedChanged(object sender, EventArgs e)
         {
-            if (OdchylenieStd.Checked)
+            if (WspolczynnikZmiennosci.Checked)
                 WybranaOperacja = "WSPOLZMIEN";
         }
 
         private void RozkladCzestosci_CheckedChanged(object sender, EventArgs e)
         {
             if (RozkladCzestosci.Checked)
-                WybranaOperacja = "WSPOLZMIEN";
+                WybranaOperacja = "ROZKLAD";
         }
         private void Waluta_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -76,8 +101,7 @@ namespace ZPI2018_Z_GAMMA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Funkcje f = new Funkcje();
-            f.myMessage(WybranaOperacja + " " + WalutaA + " " + CzasZakres);
+            ProcessChoice();
         }
     }
 }
