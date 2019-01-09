@@ -15,7 +15,9 @@ namespace ZPI2018_Z_GAMMA
               "Important Note",
               MessageBoxButtons.OK,
               MessageBoxIcon.Exclamation,
-              MessageBoxDefaultButton.Button1);
+              MessageBoxDefaultButton.Button1); 
+
+
         }
 
     }
