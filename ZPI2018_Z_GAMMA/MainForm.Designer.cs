@@ -28,36 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Currency = new System.Windows.Forms.ComboBox();
-            this.Currency2 = new System.Windows.Forms.ComboBox();
+            this.Waluta2 = new System.Windows.Forms.ComboBox();
+            this.Waluta = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.Czas = new System.Windows.Forms.ComboBox();
+            this.Sesje = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.Mediana = new System.Windows.Forms.RadioButton();
+            this.Dominata = new System.Windows.Forms.RadioButton();
+            this.OdchylenieStd = new System.Windows.Forms.RadioButton();
+            this.WspolczynnikZminnosci = new System.Windows.Forms.RadioButton();
+            this.RozkladCzestosci = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Currency
+            // Waluta2
             // 
-            this.Currency.FormattingEnabled = true;
-            this.Currency.Location = new System.Drawing.Point(39, 104);
-            this.Currency.Name = "Currency";
-            this.Currency.Size = new System.Drawing.Size(132, 24);
-            this.Currency.TabIndex = 0;
-            this.Currency.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Waluta2.FormattingEnabled = true;
+            this.Waluta2.Location = new System.Drawing.Point(39, 104);
+            this.Waluta2.Name = "Waluta2";
+            this.Waluta2.Size = new System.Drawing.Size(132, 24);
+            this.Waluta2.TabIndex = 0;
+            this.Waluta2.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // Currency2
+            // Waluta
             // 
-            this.Currency2.FormattingEnabled = true;
-            this.Currency2.Location = new System.Drawing.Point(39, 74);
-            this.Currency2.Name = "Currency2";
-            this.Currency2.Size = new System.Drawing.Size(132, 24);
-            this.Currency2.TabIndex = 1;
+            this.Waluta.FormattingEnabled = true;
+            this.Waluta.Location = new System.Drawing.Point(39, 74);
+            this.Waluta.Name = "Waluta";
+            this.Waluta.Size = new System.Drawing.Size(132, 24);
+            this.Waluta.TabIndex = 1;
             // 
             // label1
             // 
@@ -81,127 +82,138 @@
             this.label2.Text = "Zakres czasu:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // comboBox1
+            // Czas
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Czas.FormattingEnabled = true;
+            this.Czas.Items.AddRange(new object[] {
             "Tydzień",
             "Dwa Tygodnie",
             "Miesiąc",
             "Kwartał",
             "Pół Roku",
             "Rok"});
-            this.comboBox1.Location = new System.Drawing.Point(248, 74);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(263, 24);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            this.Czas.Location = new System.Drawing.Point(248, 74);
+            this.Czas.Name = "Czas";
+            this.Czas.Size = new System.Drawing.Size(263, 24);
+            this.Czas.TabIndex = 3;
+            this.Czas.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
-            // radioButton1
+            // Sesje
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton1.Location = new System.Drawing.Point(39, 237);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(907, 29);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Wyznaczenie ilości sesji wzrostowych, spadkowych i bez zmian  dla wybranej  walut" +
+            this.Sesje.AutoSize = true;
+            this.Sesje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Sesje.Location = new System.Drawing.Point(39, 208);
+            this.Sesje.Name = "Sesje";
+            this.Sesje.Size = new System.Drawing.Size(907, 29);
+            this.Sesje.TabIndex = 5;
+            this.Sesje.TabStop = true;
+            this.Sesje.Text = "Wyznaczenie ilości sesji wzrostowych, spadkowych i bez zmian  dla wybranej  walut" +
     "y i zakresu czasu";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.Sesje.UseVisualStyleBackColor = true;
+            this.Sesje.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(31, 186);
+            this.label3.Location = new System.Drawing.Point(31, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(381, 48);
             this.label3.TabIndex = 6;
             this.label3.Text = "Dostępne operacje:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // radioButton2
+            // Mediana
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton2.Location = new System.Drawing.Point(39, 272);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(433, 29);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Mediana  dla wybranej  waluty i zakresu czasu";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.Mediana.AutoSize = true;
+            this.Mediana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Mediana.Location = new System.Drawing.Point(39, 243);
+            this.Mediana.Name = "Mediana";
+            this.Mediana.Size = new System.Drawing.Size(433, 29);
+            this.Mediana.TabIndex = 7;
+            this.Mediana.TabStop = true;
+            this.Mediana.Text = "Mediana  dla wybranej  waluty i zakresu czasu";
+            this.Mediana.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // Dominata
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton3.Location = new System.Drawing.Point(39, 307);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(440, 29);
-            this.radioButton3.TabIndex = 8;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Dominata  dla wybranej  waluty i zakresu czasu";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.Dominata.AutoSize = true;
+            this.Dominata.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Dominata.Location = new System.Drawing.Point(39, 278);
+            this.Dominata.Name = "Dominata";
+            this.Dominata.Size = new System.Drawing.Size(440, 29);
+            this.Dominata.TabIndex = 8;
+            this.Dominata.TabStop = true;
+            this.Dominata.Text = "Dominata  dla wybranej  waluty i zakresu czasu";
+            this.Dominata.UseVisualStyleBackColor = true;
+            this.Dominata.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
-            // radioButton4
+            // OdchylenieStd
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton4.Location = new System.Drawing.Point(39, 342);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(568, 29);
-            this.radioButton4.TabIndex = 9;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Odchylenie standardowe dla wybranej  waluty i zakresu czasu";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.OdchylenieStd.AutoSize = true;
+            this.OdchylenieStd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.OdchylenieStd.Location = new System.Drawing.Point(39, 313);
+            this.OdchylenieStd.Name = "OdchylenieStd";
+            this.OdchylenieStd.Size = new System.Drawing.Size(568, 29);
+            this.OdchylenieStd.TabIndex = 9;
+            this.OdchylenieStd.TabStop = true;
+            this.OdchylenieStd.Text = "Odchylenie standardowe dla wybranej  waluty i zakresu czasu";
+            this.OdchylenieStd.UseVisualStyleBackColor = true;
+            this.OdchylenieStd.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
-            // radioButton5
+            // WspolczynnikZminnosci
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton5.Location = new System.Drawing.Point(39, 377);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(577, 29);
-            this.radioButton5.TabIndex = 10;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Współczynnik zmienności dla wybranej  waluty i zakresu czasu";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.WspolczynnikZminnosci.AutoSize = true;
+            this.WspolczynnikZminnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.WspolczynnikZminnosci.Location = new System.Drawing.Point(39, 348);
+            this.WspolczynnikZminnosci.Name = "WspolczynnikZminnosci";
+            this.WspolczynnikZminnosci.Size = new System.Drawing.Size(577, 29);
+            this.WspolczynnikZminnosci.TabIndex = 10;
+            this.WspolczynnikZminnosci.TabStop = true;
+            this.WspolczynnikZminnosci.Text = "Współczynnik zmienności dla wybranej  waluty i zakresu czasu";
+            this.WspolczynnikZminnosci.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // RozkladCzestosci
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton6.Location = new System.Drawing.Point(39, 412);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(583, 29);
-            this.radioButton6.TabIndex = 11;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Rozkład częstości zmian tygodniowych dla wybranych par walut";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
+            this.RozkladCzestosci.AutoSize = true;
+            this.RozkladCzestosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.RozkladCzestosci.Location = new System.Drawing.Point(39, 383);
+            this.RozkladCzestosci.Name = "RozkladCzestosci";
+            this.RozkladCzestosci.Size = new System.Drawing.Size(583, 29);
+            this.RozkladCzestosci.TabIndex = 11;
+            this.RozkladCzestosci.TabStop = true;
+            this.RozkladCzestosci.Text = "Rozkład częstości zmian tygodniowych dla wybranych par walut";
+            this.RozkladCzestosci.UseVisualStyleBackColor = true;
+            this.RozkladCzestosci.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(722, 55);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(224, 61);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Wykonaj";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.radioButton6);
-            this.Controls.Add(this.radioButton5);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.RozkladCzestosci);
+            this.Controls.Add(this.WspolczynnikZminnosci);
+            this.Controls.Add(this.OdchylenieStd);
+            this.Controls.Add(this.Dominata);
+            this.Controls.Add(this.Mediana);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.Sesje);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Czas);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Currency2);
-            this.Controls.Add(this.Currency);
+            this.Controls.Add(this.Waluta);
+            this.Controls.Add(this.Waluta2);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "MainForm";
@@ -212,18 +224,19 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox Currency;
-        private System.Windows.Forms.ComboBox Currency2;
+        private System.Windows.Forms.ComboBox Waluta2;
+        private System.Windows.Forms.ComboBox Waluta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.ComboBox Czas;
+        private System.Windows.Forms.RadioButton Sesje;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton Mediana;
+        private System.Windows.Forms.RadioButton Dominata;
+        private System.Windows.Forms.RadioButton OdchylenieStd;
+        private System.Windows.Forms.RadioButton WspolczynnikZminnosci;
+        private System.Windows.Forms.RadioButton RozkladCzestosci;
+        private System.Windows.Forms.Button button1;
     }
 }
 
