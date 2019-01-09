@@ -69,17 +69,24 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(240, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 48);
+            this.label2.Size = new System.Drawing.Size(280, 48);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Waluty:";
+            this.label2.Text = "Zakres czasu:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Tydzień",
+            "Dwa Tygodnie",
+            "Miesiąc",
+            "Kwartał",
+            "Pół Roku",
+            "Rok"});
             this.comboBox1.Location = new System.Drawing.Point(248, 110);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 24);
+            this.comboBox1.Size = new System.Drawing.Size(263, 24);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
