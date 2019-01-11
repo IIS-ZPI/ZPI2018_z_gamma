@@ -49,6 +49,17 @@ namespace ZPI2018_Z_GAMMA
                 return;
             }
 
+            if (WybranaOperacja != "ROZKLAD" && WalutaA == "")
+            {
+                MessageBox.Show("Wybierz walutę",
+                "Wybierz Parametry",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button1);
+                Waluta.BackColor = Color.Red;
+                return;
+            }
+
             if (WybranaOperacja == "ROZKLAD" && (WalutaA=="" || WalutaB==""))
             {
                 MessageBox.Show("Wybierz dwie waluty",
@@ -132,6 +143,11 @@ namespace ZPI2018_Z_GAMMA
         {
             ProcessChoice();
     
+        }
+
+        private void Waluta_MouseClick(object sender, MouseEventArgs e)
+        {
+            Waluta.BackColor = Color.White;
         }
     }
 }
