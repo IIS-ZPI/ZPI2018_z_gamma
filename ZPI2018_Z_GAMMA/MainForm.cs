@@ -24,6 +24,7 @@ namespace ZPI2018_Z_GAMMA
         string WalutaB = "";
         string CzasZakres = "";
         string IloscDni = "0";
+        List<Funkcje.Waluta> walutaALista;
 
         private void ProcessChoice()
         {
@@ -109,8 +110,8 @@ namespace ZPI2018_Z_GAMMA
                 MessageBoxIcon.Exclamation,
                 MessageBoxDefaultButton.Button1);
                 */
-
-            List<Funkcje.Waluta> walutaALista = funkcje.getData("EUR", IloscDni);
+            
+            List<Funkcje.Waluta> walutaALista = funkcje.getData(WalutaA, IloscDni);
             if(walutaALista.Count() > 0)
             MessageBox.Show(" " + walutaALista[1].Wartosc,
                   "Important Note");
