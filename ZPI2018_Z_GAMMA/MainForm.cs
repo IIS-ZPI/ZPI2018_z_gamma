@@ -26,7 +26,10 @@ namespace ZPI2018_Z_GAMMA
 
         private void ProcessChoice()
         {
-            if(CzasZakres == "" && WybranaOperacja != "ROZKLAD")
+
+            Funkcje funkcje = new Funkcje();
+
+            if (CzasZakres == "" && WybranaOperacja != "ROZKLAD")
             {
                  MessageBox.Show("Wybierz zakres czasu",
                  "Wybierz Parametry",
@@ -62,7 +65,14 @@ namespace ZPI2018_Z_GAMMA
                 MessageBoxIcon.Exclamation,
                 MessageBoxDefaultButton.Button1);
                 */
+
+            List<Funkcje.Waluta> walutaALista = funkcje.getData("EUR", "10");
+            MessageBox.Show(" " + walutaALista[1].Wartosc,
+                  "Important Note");
             return;
+
+
+            
         }
 
         private void Mediana_CheckedChanged(object sender, EventArgs e)
@@ -120,6 +130,7 @@ namespace ZPI2018_Z_GAMMA
         private void button1_Click(object sender, EventArgs e)
         {
             ProcessChoice();
+    
         }
     }
 }
