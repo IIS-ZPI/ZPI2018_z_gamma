@@ -99,7 +99,7 @@ namespace ZPI2018_Z_GAMMA
 
             else if (CzasZakres == "Rok")
             {
-                IloscDni = "126";
+                IloscDni = "254";
             }
 
             /*
@@ -110,7 +110,7 @@ namespace ZPI2018_Z_GAMMA
                 MessageBoxDefaultButton.Button1);
                 */
 
-            List<Funkcje.Waluta> walutaALista = funkcje.getData("EUR", "10");
+            List<Funkcje.Waluta> walutaALista = funkcje.getData("EUR", IloscDni);
             if(walutaALista.Count() > 0)
             MessageBox.Show(" " + walutaALista[1].Wartosc,
                   "Important Note");
