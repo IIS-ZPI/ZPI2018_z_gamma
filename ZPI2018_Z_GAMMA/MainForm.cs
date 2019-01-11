@@ -29,7 +29,7 @@ namespace ZPI2018_Z_GAMMA
 
             Funkcje funkcje = new Funkcje();
 
-            if (CzasZakres == "" && WybranaOperacja != "ROZKLAD")
+            if (CzasZakres == "")
             {
                  MessageBox.Show("Wybierz zakres czasu",
                  "Wybierz Parametry",
