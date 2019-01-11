@@ -67,6 +67,7 @@ namespace ZPI2018_Z_GAMMA
                 */
 
             List<Funkcje.Waluta> walutaALista = funkcje.getData("EUR", "10");
+            if(walutaALista.Count() > 0)
             MessageBox.Show(" " + walutaALista[1].Wartosc,
                   "Important Note");
             return;
