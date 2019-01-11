@@ -71,7 +71,37 @@ namespace ZPI2018_Z_GAMMA
                 return;
             }
 
-            
+            if(CzasZakres == "Tydzień")
+            {
+                IloscDni = "5";
+            } else if (CzasZakres == "Dwa Tygodnie")
+            {
+                IloscDni = "10";
+            }
+            else if (CzasZakres == "Miesiąc")
+            {
+                IloscDni = "21";
+            }
+            else if (CzasZakres == "Kwartał")
+            {
+                IloscDni = "84";
+            }
+
+            else if (CzasZakres == "Kwartał")
+            {
+                IloscDni = "84";
+            }
+
+            else if (CzasZakres == "Pół Roku")
+            {
+                IloscDni = "126";
+            }
+
+            else if (CzasZakres == "Rok")
+            {
+                IloscDni = "126";
+            }
+
             /*
             MessageBox.Show("WybranaOperacja " + WybranaOperacja + " CzasZakres " + CzasZakres + " Waluta " + WalutaA,
                 "Wybrane Parametry",
