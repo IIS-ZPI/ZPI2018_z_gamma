@@ -46,6 +46,42 @@
             // Waluta2
             // 
             this.Waluta2.FormattingEnabled = true;
+            this.Waluta2.Items.AddRange(new object[] {
+            "AUD",
+            "BGN",
+            "BRL",
+            "CAD",
+            "CHF",
+            "CLP",
+            "CNY",
+            "CZK",
+            "DKK",
+            "EUR",
+            "GBP",
+            "HKD",
+            "HRK",
+            "HUF",
+            "IDR",
+            "ILS",
+            "INR",
+            "ISK",
+            "JPY",
+            "KRW",
+            "MXN",
+            "MYR",
+            "NOK",
+            "NZD",
+            "PHP",
+            "RON",
+            "RUB",
+            "SEK",
+            "SGD",
+            "THB",
+            "TRY",
+            "UAH",
+            "USD",
+            "XDR",
+            "ZAR"});
             this.Waluta2.Location = new System.Drawing.Point(39, 104);
             this.Waluta2.Name = "Waluta2";
             this.Waluta2.Size = new System.Drawing.Size(132, 24);
@@ -55,11 +91,49 @@
             // Waluta
             // 
             this.Waluta.FormattingEnabled = true;
+            this.Waluta.Items.AddRange(new object[] {
+            "AUD",
+            "BGN",
+            "BRL",
+            "CAD",
+            "CHF",
+            "CLP",
+            "CNY",
+            "CZK",
+            "DKK",
+            "EUR",
+            "GBP",
+            "HKD",
+            "HRK",
+            "HUF",
+            "IDR",
+            "ILS",
+            "INR",
+            "ISK",
+            "JPY",
+            "KRW",
+            "MXN",
+            "MYR",
+            "NOK",
+            "NZD",
+            "PHP",
+            "RON",
+            "RUB",
+            "SEK",
+            "SGD",
+            "THB",
+            "TRY",
+            "UAH",
+            "USD",
+            "XDR",
+            "ZAR"});
             this.Waluta.Location = new System.Drawing.Point(39, 74);
             this.Waluta.Name = "Waluta";
             this.Waluta.Size = new System.Drawing.Size(132, 24);
+            this.Waluta.Sorted = true;
             this.Waluta.TabIndex = 1;
             this.Waluta.SelectedIndexChanged += new System.EventHandler(this.Waluta_SelectedIndexChanged);
+            this.Waluta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Waluta_MouseClick);
             // 
             // label1
             // 

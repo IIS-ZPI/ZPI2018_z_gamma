@@ -23,10 +23,15 @@ namespace ZPI2018_Z_GAMMA
         string WalutaA = "";
         string WalutaB = "";
         string CzasZakres = "";
+        string IloscDni = "0";
+        List<Funkcje.Waluta> walutaALista;
 
         private void ProcessChoice()
         {
-            if(CzasZakres == "" && WybranaOperacja != "ROZKLAD")
+
+            Funkcje funkcje = new Funkcje();
+
+            if (CzasZakres == "")
             {
                  MessageBox.Show("Wybierz zakres czasu",
                  "Wybierz Parametry",
@@ -46,6 +51,17 @@ namespace ZPI2018_Z_GAMMA
                 return;
             }
 
+            if (WybranaOperacja != "ROZKLAD" && WalutaA == "")
+            {
+                MessageBox.Show("Wybierz walutę",
+                "Wybierz Parametry",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button1);
+                Waluta.BackColor = Color.Red;
+                return;
+            }
+
             if (WybranaOperacja == "ROZKLAD" && (WalutaA=="" || WalutaB==""))
             {
                 MessageBox.Show("Wybierz dwie waluty",
@@ -56,12 +72,62 @@ namespace ZPI2018_Z_GAMMA
                 return;
             }
 
+            if(CzasZakres == "Tydzień")
+            {
+                IloscDni = "5";
+            } else if (CzasZakres == "Dwa Tygodnie")
+            {
+                IloscDni = "10";
+            }
+            else if (CzasZakres == "Miesiąc")
+            {
+                IloscDni = "21";
+            }
+            else if (CzasZakres == "Kwartał")
+            {
+                IloscDni = "84";
+            }
+
+            else if (CzasZakres == "Kwartał")
+            {
+                IloscDni = "84";
+            }
+
+            else if (CzasZakres == "Pół Roku")
+            {
+                IloscDni = "126";
+            }
+
+            else if (CzasZakres == "Rok")
+            {
+                IloscDni = "254";
+            }
+
+            /*
             MessageBox.Show("WybranaOperacja " + WybranaOperacja + " CzasZakres " + CzasZakres + " Waluta " + WalutaA,
                 "Wybrane Parametry",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Exclamation,
                 MessageBoxDefaultButton.Button1);
+                */
+         
+            walutaALista = funkcje.getData(WalutaA, IloscDni);
+            if(walutaALista.Count() > 0)
+            MessageBox.Show(" " + walutaALista[1].Wartosc,
+                  "Important Note");
+
+            if(WybranaOperacja == "ROZKLAD")
+            {
+
+                walutaALista = funkcje.getData(WalutaB, IloscDni);
+                if (walutaALista.Count() > 0)
+                    MessageBox.Show(" " + walutaALista[1].Wartosc,
+                          "Important Note");
+            }
             return;
+
+
+            
         }
 
         private void Mediana_CheckedChanged(object sender, EventArgs e)
@@ -119,6 +185,12 @@ namespace ZPI2018_Z_GAMMA
         private void button1_Click(object sender, EventArgs e)
         {
             ProcessChoice();
+    
+        }
+
+        private void Waluta_MouseClick(object sender, MouseEventArgs e)
+        {
+            Waluta.BackColor = Color.White;
         }
     }
 }
