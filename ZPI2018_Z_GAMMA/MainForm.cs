@@ -23,6 +23,7 @@ namespace ZPI2018_Z_GAMMA
         string WalutaA = "";
         string WalutaB = "";
         string CzasZakres = "";
+        string IloscDni = "0";
 
         private void ProcessChoice()
         {
@@ -69,6 +70,8 @@ namespace ZPI2018_Z_GAMMA
                 MessageBoxDefaultButton.Button1);
                 return;
             }
+
+            
             /*
             MessageBox.Show("WybranaOperacja " + WybranaOperacja + " CzasZakres " + CzasZakres + " Waluta " + WalutaA,
                 "Wybrane Parametry",
