@@ -110,11 +110,20 @@ namespace ZPI2018_Z_GAMMA
                 MessageBoxIcon.Exclamation,
                 MessageBoxDefaultButton.Button1);
                 */
-            
-            List<Funkcje.Waluta> walutaALista = funkcje.getData(WalutaA, IloscDni);
+         
+            walutaALista = funkcje.getData(WalutaA, IloscDni);
             if(walutaALista.Count() > 0)
             MessageBox.Show(" " + walutaALista[1].Wartosc,
                   "Important Note");
+
+            if(WybranaOperacja == "ROZKLAD")
+            {
+
+                walutaALista = funkcje.getData(WalutaB, IloscDni);
+                if (walutaALista.Count() > 0)
+                    MessageBox.Show(" " + walutaALista[1].Wartosc,
+                          "Important Note");
+            }
             return;
 
 

@@ -46,8 +46,8 @@ namespace ZPI2018_Z_GAMMA
                 int lc = list.Count();
                 string str = lc.ToString();
 
-                MessageBox.Show(str + " " + list[1].Wartosc,
-                  "Important Note");
+              //  MessageBox.Show(str + " " + list[1].Wartosc,
+              //    "Important Note");
             }
             catch
             {
