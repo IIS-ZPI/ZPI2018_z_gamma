@@ -19,6 +19,24 @@ namespace ZPI2018_Z_GAMMA
               MessageBoxDefaultButton.Button1); 
         }
 
+        public void IloscSesji (string wal, List<Waluta> dane)
+        {
+            int sSpad = 0;
+            int sBezZmian = 0;
+            int sWzrost = 0;
+
+            if (dane.Count() < 2)
+            {
+
+            }
+
+            for (int a= 0; a < dane.Count(); a++)
+            {
+
+
+            }
+        }
+
         public class Waluta
         {
             public float Wartosc;
