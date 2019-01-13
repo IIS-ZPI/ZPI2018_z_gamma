@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace ZPI2018_Z_GAMMA
 {
-    class Funkcje
+    public class Funkcje
     {
         public void myMessage(string v)
         {
@@ -66,7 +66,16 @@ namespace ZPI2018_Z_GAMMA
 
         public float Mediana(string wal, List<Waluta> dane)
         {
-            return 0;
+            float r = 0;
+            //dane.Sort;
+            r = dane[(dane.Count / 2)].Wartosc;
+            MessageBox.Show("Ilość notowań: " + dane.Count() + " Mediana " + r,
+               "Wynik",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Information,
+               MessageBoxDefaultButton.Button1);
+            return r;
+
         }
 
         public class Waluta
