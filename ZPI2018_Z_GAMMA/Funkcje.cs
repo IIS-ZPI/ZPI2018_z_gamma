@@ -78,6 +78,20 @@ namespace ZPI2018_Z_GAMMA
 
         }
 
+        public float Dominata(string wal, List<Waluta> dane)
+        {
+            float r = 0;
+            //dane.Sort;
+            r = dane[(dane.Count / 2)].Wartosc;
+            MessageBox.Show("Ilość notowań: " + dane.Count() + " Mediana " + r,
+               "Wynik",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Information,
+               MessageBoxDefaultButton.Button1);
+            return r;
+
+        }
+
         public class Waluta
         {
             public float Wartosc;
