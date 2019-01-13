@@ -14,6 +14,12 @@ namespace ZPI2018_Z_GAMMA.Tests
         [TestMethod()]
         public void MedianaTest()
         {
+            float expected = 0;
+            float actual = 0;
+            Funkcje f =  new Funkcje();
+     
+             Assert.AreEqual(expected, actual, 0, "Żle liczona Mediana");
+
             Assert.Fail();
         }
     }
