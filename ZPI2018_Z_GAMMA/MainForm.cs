@@ -128,6 +128,9 @@ namespace ZPI2018_Z_GAMMA
             if (WybranaOperacja == "SESJE")
                 funkcje.IloscSesji(WalutaA, walutaALista);
 
+            if (WybranaOperacja == "MEDIANA")
+                funkcje.Mediana(WalutaA, walutaALista);
+
             return;
 
 

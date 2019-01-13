@@ -24,10 +24,7 @@ namespace ZPI2018_Z_GAMMA
             int sSpad = 0;
             int sBezZmian = 0;
             int sWzrost = 0;
-
             float tmpVal = 0;
-
-           
 
             for (int a= 0; a < dane.Count(); a++)
             {
@@ -72,6 +69,11 @@ namespace ZPI2018_Z_GAMMA
                 return dane.Count();
         }
 
+        function float Mediana(string wal, List<Waluta> dane)
+        {
+            
+        }
+
         public class Waluta
         {
             public float Wartosc;
@@ -95,8 +97,7 @@ namespace ZPI2018_Z_GAMMA
                 int lc = list.Count();
                 string str = lc.ToString();
 
-              //  MessageBox.Show(str + " " + list[1].Wartosc,
-              //    "Important Note");
+             
             }
             catch
             {
