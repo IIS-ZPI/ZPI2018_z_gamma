@@ -69,9 +69,9 @@ namespace ZPI2018_Z_GAMMA
                 return dane.Count();
         }
 
-        function float Mediana(string wal, List<Waluta> dane)
+        public float Mediana(string wal, List<Waluta> dane)
         {
-            
+            return 0;
         }
 
         public class Waluta
