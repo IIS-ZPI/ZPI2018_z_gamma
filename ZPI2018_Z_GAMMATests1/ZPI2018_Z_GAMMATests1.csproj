@@ -51,8 +51,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="FunkcjeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZPI2018_Z_GAMMA\ZPI2018_Z_GAMMA.csproj">
+      <Project>{9088B3AF-DB8A-4DC5-90D9-CBECF970B529}</Project>
+      <Name>ZPI2018_Z_GAMMA</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
