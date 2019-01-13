@@ -19,7 +19,7 @@ namespace ZPI2018_Z_GAMMA
               MessageBoxDefaultButton.Button1); 
         }
 
-        public void IloscSesji (string wal, List<Waluta> dane)
+        public int IloscSesji (string wal, List<Waluta> dane)
         {
             int sSpad = 0;
             int sBezZmian = 0;
@@ -31,6 +31,11 @@ namespace ZPI2018_Z_GAMMA
 
             for (int a= 0; a < dane.Count(); a++)
             {
+                MessageBox.Show(" dane.Count():  " + dane.Count(),
+           "Wynik",
+           MessageBoxButtons.OK,
+           MessageBoxIcon.Information,
+          MessageBoxDefaultButton.Button1);
 
                 if (a == 0)
                 {
@@ -41,8 +46,6 @@ namespace ZPI2018_Z_GAMMA
                 {
                     if (tmpVal == dane[a].Wartosc)
                         sBezZmian++;
-                    if (tmpVal < dane[a].Wartosc)
-                        sWzrost++;
                     if (tmpVal < dane[a].Wartosc)
                         sWzrost++;
                     if (tmpVal > dane[a].Wartosc)
@@ -58,15 +61,15 @@ namespace ZPI2018_Z_GAMMA
                  MessageBoxButtons.OK,
                  MessageBoxIcon.Exclamation,
                  MessageBoxDefaultButton.Button1);
-                return;
+                return 0;
             }
 
-            MessageBox.Show("Sesje rosnące: " + sWzrost + " sesje malejące " + sSpad + " sesje bez zmian " + sBezZmian,
-            "Wynik",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Information,
-           MessageBoxDefaultButton.Button1);
-
+                MessageBox.Show("Ilość notowań: " + dane.Count() + " Sesje rosnące: " + sWzrost + " sesje malejące " + sSpad + " sesje bez zmian " + sBezZmian,
+                "Wynik",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1);
+                return dane.Count();
         }
 
         public class Waluta
@@ -80,11 +83,7 @@ namespace ZPI2018_Z_GAMMA
             try
             {
                 string link = "http://api.nbp.pl/api/exchangerates/rates/A/" + wal + "/last/" + dni + "?format=xml";
-                MessageBox.Show(link,
-               " ",
-               MessageBoxButtons.OK,
-               MessageBoxIcon.Exclamation,
-               MessageBoxDefaultButton.Button1);
+              
 
                 XDocument xDoc = XDocument.Load(link);
                 list = xDoc.Descendants("Rate")
