@@ -21,6 +21,7 @@ namespace ZPI2018_Z_GAMMA.Tests
              Assert.AreEqual(expected, actual, 0, "Żle liczona Mediana");
 
             Assert.Fail();
+
         }
     }
 }
