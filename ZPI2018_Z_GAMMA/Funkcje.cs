@@ -25,16 +25,48 @@ namespace ZPI2018_Z_GAMMA
             int sBezZmian = 0;
             int sWzrost = 0;
 
-            if (dane.Count() < 2)
-            {
+            float tmpVal = 0;
 
-            }
+           
 
             for (int a= 0; a < dane.Count(); a++)
             {
 
-
+                if (a == 0)
+                {
+                    tmpVal = dane[a].Wartosc;
+                    continue;
+                }
+                else
+                {
+                    if (tmpVal == dane[a].Wartosc)
+                        sBezZmian++;
+                    if (tmpVal < dane[a].Wartosc)
+                        sWzrost++;
+                    if (tmpVal < dane[a].Wartosc)
+                        sWzrost++;
+                    if (tmpVal > dane[a].Wartosc)
+                        sSpad++;
+                    tmpVal = dane[a].Wartosc;
+                }
             }
+
+            if (dane.Count() < 2)
+            {
+                 MessageBox.Show("Zbyt mała ilośc danych do obliczenia sesji",
+                 "Ważne",
+                 MessageBoxButtons.OK,
+                 MessageBoxIcon.Exclamation,
+                 MessageBoxDefaultButton.Button1);
+                return;
+            }
+
+            MessageBox.Show("Sesje rosnące: " + sWzrost + " sesje malejące " + sSpad + " sesje bez zmian " + sBezZmian,
+            "Wynik",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information,
+           MessageBoxDefaultButton.Button1);
+
         }
 
         public class Waluta

@@ -124,6 +124,10 @@ namespace ZPI2018_Z_GAMMA
                     MessageBox.Show(" " + walutaALista[1].Wartosc,
                           "Important Note");
             }
+
+            if (WybranaOperacja == "SESJE")
+                funkcje.IloscSesji(WalutaA, walutaALista);
+
             return;
 
 
