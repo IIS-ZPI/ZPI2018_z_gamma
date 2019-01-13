@@ -12,26 +12,9 @@ namespace ZPI2018_Z_GAMMA.Tests
     public class FunkcjeTests
     {
         [TestMethod()]
-        public void myMessageTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void IloscSesjiTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
         public void MedianaTest()
         {
             Assert.Fail();
-        }
-
-        public void getDataTest()
-        {
-
         }
     }
 }
