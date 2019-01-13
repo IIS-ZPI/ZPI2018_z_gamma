@@ -28,11 +28,6 @@ namespace ZPI2018_Z_GAMMA
 
             for (int a= 0; a < dane.Count(); a++)
             {
-                MessageBox.Show(" dane.Count():  " + dane.Count(),
-           "Wynik",
-           MessageBoxButtons.OK,
-           MessageBoxIcon.Information,
-          MessageBoxDefaultButton.Button1);
 
                 if (a == 0)
                 {
