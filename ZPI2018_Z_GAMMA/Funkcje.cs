@@ -19,6 +19,56 @@ namespace ZPI2018_Z_GAMMA
               MessageBoxDefaultButton.Button1); 
         }
 
+        public int IloscSesji (string wal, List<Waluta> dane)
+        {
+            int sSpad = 0;
+            int sBezZmian = 0;
+            int sWzrost = 0;
+            float tmpVal = 0;
+
+            for (int a= 0; a < dane.Count(); a++)
+            {
+
+                if (a == 0)
+                {
+                    tmpVal = dane[a].Wartosc;
+                    continue;
+                }
+                else
+                {
+                    if (tmpVal == dane[a].Wartosc)
+                        sBezZmian++;
+                    if (tmpVal < dane[a].Wartosc)
+                        sWzrost++;
+                    if (tmpVal > dane[a].Wartosc)
+                        sSpad++;
+                    tmpVal = dane[a].Wartosc;
+                }
+            }
+
+            if (dane.Count() < 2)
+            {
+                 MessageBox.Show("Zbyt mała ilośc danych do obliczenia sesji",
+                 "Ważne",
+                 MessageBoxButtons.OK,
+                 MessageBoxIcon.Exclamation,
+                 MessageBoxDefaultButton.Button1);
+                return 0;
+            }
+
+                MessageBox.Show("Ilość notowań: " + dane.Count() + " Sesje rosnące: " + sWzrost + " sesje malejące " + sSpad + " sesje bez zmian " + sBezZmian,
+                "Wynik",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1);
+                return dane.Count();
+        }
+
+        public float Mediana(string wal, List<Waluta> dane)
+        {
+            return 0;
+        }
+
         public class Waluta
         {
             public float Wartosc;
@@ -30,11 +80,7 @@ namespace ZPI2018_Z_GAMMA
             try
             {
                 string link = "http://api.nbp.pl/api/exchangerates/rates/A/" + wal + "/last/" + dni + "?format=xml";
-                MessageBox.Show(link,
-               " ",
-               MessageBoxButtons.OK,
-               MessageBoxIcon.Exclamation,
-               MessageBoxDefaultButton.Button1);
+              
 
                 XDocument xDoc = XDocument.Load(link);
                 list = xDoc.Descendants("Rate")
@@ -46,8 +92,7 @@ namespace ZPI2018_Z_GAMMA
                 int lc = list.Count();
                 string str = lc.ToString();
 
-              //  MessageBox.Show(str + " " + list[1].Wartosc,
-              //    "Important Note");
+             
             }
             catch
             {
