@@ -17,10 +17,64 @@ namespace ZPI2018_Z_GAMMA.Tests
             float expected = 0;
             float actual = 0;
             Funkcje f =  new Funkcje();
-     
-             Assert.AreEqual(expected, actual, 0, "Żle liczona Mediana");
+            Funkcje.Waluta itm = new Funkcje.Waluta();
+            List<Funkcje.Waluta> w = new List<Funkcje.Waluta>();
+            itm.Wartosc = 3;
+            w.Add(itm);
+            itm.Wartosc = 3;
+            w.Add(itm);
+            itm.Wartosc = 3;
+            w.Add(itm);
+            itm.Wartosc = 3;
+            w.Add(itm);
+            expected = 3;
+            actual = f.Mediana("ANY", w);
+            Assert.AreEqual(expected, actual, 0, "Żle liczona Mediana");
+            //Assert.Fail();
 
-            Assert.Fail();
+        }
+
+        public void MedianaTestRos()
+        {
+            float expected = 0;
+            float actual = 0;
+            Funkcje f = new Funkcje();
+            Funkcje.Waluta itm = new Funkcje.Waluta();
+            List<Funkcje.Waluta> w = new List<Funkcje.Waluta>();
+            itm.Wartosc = 1;
+            w.Add(itm);
+            itm.Wartosc = 2;
+            w.Add(itm);
+            itm.Wartosc = 3;
+            w.Add(itm);
+            itm.Wartosc = 4;
+            w.Add(itm);
+            expected = 3;
+            actual = f.Mediana("ANY", w);
+            Assert.AreEqual(expected, actual, 0, "Żle liczona Mediana");
+            //Assert.Fail();
+
+        }
+
+        public void MedianaTestMal()
+        {
+            float expected = 0;
+            float actual = 0;
+            Funkcje f = new Funkcje();
+            Funkcje.Waluta itm = new Funkcje.Waluta();
+            List<Funkcje.Waluta> w = new List<Funkcje.Waluta>();
+            itm.Wartosc = 4;
+            w.Add(itm);
+            itm.Wartosc = 3;
+            w.Add(itm);
+            itm.Wartosc = 2;
+            w.Add(itm);
+            itm.Wartosc = 1;
+            w.Add(itm);
+            expected = 3;
+            actual = f.Mediana("ANY", w);
+            Assert.AreEqual(expected, actual, 0, "Żle liczona Mediana");
+            //Assert.Fail();
 
         }
     }
