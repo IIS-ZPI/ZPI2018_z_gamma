@@ -27,6 +27,8 @@ namespace ZPI2018_Z_GAMMA.Tests
             w.Add(itm);
             itm.Wartosc = 3;
             w.Add(itm);
+            itm.Wartosc = 3;
+            w.Add(itm);
             expected = 3;
             actual = f.Mediana("ANY", w);
             Assert.AreEqual(expected, actual, 0, "Żle liczona Mediana");
@@ -49,6 +51,8 @@ namespace ZPI2018_Z_GAMMA.Tests
             w.Add(itm);
             itm.Wartosc = 4;
             w.Add(itm);
+            itm.Wartosc = 5;
+            w.Add(itm);
             expected = 3;
             actual = f.Mediana("ANY", w);
             Assert.AreEqual(expected, actual, 0, "Żle liczona Mediana");
@@ -70,6 +74,8 @@ namespace ZPI2018_Z_GAMMA.Tests
             itm.Wartosc = 2;
             w.Add(itm);
             itm.Wartosc = 1;
+            w.Add(itm);
+            itm.Wartosc = 0;
             w.Add(itm);
             expected = 2;
             actual = f.Mediana("ANY", w);
