@@ -131,6 +131,11 @@ namespace ZPI2018_Z_GAMMA
             if (WybranaOperacja == "MEDIANA")
                 funkcje.Mediana(WalutaA, walutaALista);
 
+            if(WybranaOperacja == "DOMINATA")
+            {
+                funkcje.Dominata(WalutaA, walutaALista);
+            }
+
             return;
 
 
