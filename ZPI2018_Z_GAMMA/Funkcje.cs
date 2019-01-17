@@ -215,7 +215,7 @@ namespace ZPI2018_Z_GAMMA
         }
 
 
-        public int RozkadZmian(string wal1, string wal2, List<Waluta> dane List<Waluta> dane2)
+        public int RozkadZmian(string wal1, string wal2, List<Waluta> dane,  List<Waluta> dane2)
         {
             int sSpad = 0;
             int sBezZmian = 0;

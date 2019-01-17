@@ -253,10 +253,10 @@
             this.RozkladCzestosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.RozkladCzestosci.Location = new System.Drawing.Point(39, 383);
             this.RozkladCzestosci.Name = "RozkladCzestosci";
-            this.RozkladCzestosci.Size = new System.Drawing.Size(583, 29);
+            this.RozkladCzestosci.Size = new System.Drawing.Size(607, 29);
             this.RozkladCzestosci.TabIndex = 11;
             this.RozkladCzestosci.TabStop = true;
-            this.RozkladCzestosci.Text = "Rozkład częstości zmian tygodniowych dla wybranych par walut";
+            this.RozkladCzestosci.Text = "Rozkład zmian miesięcznych i kwartalnych dla wybranej pary walut";
             this.RozkladCzestosci.UseVisualStyleBackColor = true;
             this.RozkladCzestosci.CheckedChanged += new System.EventHandler(this.RozkladCzestosci_CheckedChanged);
             // 

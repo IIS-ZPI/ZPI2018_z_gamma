@@ -25,6 +25,7 @@ namespace ZPI2018_Z_GAMMA
         string CzasZakres = "";
         string IloscDni = "0";
         List<Funkcje.Waluta> walutaALista;
+        List<Funkcje.Waluta> walutaBLista;
 
         private void ProcessChoice()
         {
@@ -72,7 +73,17 @@ namespace ZPI2018_Z_GAMMA
                 return;
             }
 
-            if(CzasZakres == "Tydzień")
+            if (WybranaOperacja == "ROZKLAD" && CzasZakres != "Kwartał" && CzasZakres != "Miesiąc")
+            {
+                MessageBox.Show("Statystyka wykonuje obliczenia dla przedziałow czasu kwartał lub miesiac",
+                "Wybierz Parametry",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button1);
+                return;
+            }
+
+            if (CzasZakres == "Tydzień")
             {
                 IloscDni = "5";
             } else if (CzasZakres == "Dwa Tygodnie")
@@ -103,26 +114,19 @@ namespace ZPI2018_Z_GAMMA
                 IloscDni = "254";
             }
 
-            /*
-            MessageBox.Show("WybranaOperacja " + WybranaOperacja + " CzasZakres " + CzasZakres + " Waluta " + WalutaA,
-                "Wybrane Parametry",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Exclamation,
-                MessageBoxDefaultButton.Button1);
-                */
+
+
+
          
             walutaALista = funkcje.getData(WalutaA, IloscDni);
             if(walutaALista.Count() > 0)
-          //  MessageBox.Show(" " + walutaALista[1].Wartosc,
-           //       "Important Note");
+
 
             if(WybranaOperacja == "ROZKLAD")
             {
 
-                walutaALista = funkcje.getData(WalutaB, IloscDni);
-                if (walutaALista.Count() > 0)
-                    MessageBox.Show(" " + walutaALista[1].Wartosc,
-                          "Important Note");
+                walutaBLista = funkcje.getData(WalutaB, IloscDni);
+               
             }
 
             if (WybranaOperacja == "SESJE")
@@ -144,6 +148,16 @@ namespace ZPI2018_Z_GAMMA
             if (WybranaOperacja == "WSPOLZMIEN")
             {
                 funkcje.WspZm(WalutaA, walutaALista);
+            }
+
+            if (WybranaOperacja == "WSPOLZMIEN")
+            {
+                funkcje.WspZm(WalutaA, walutaALista);
+            }
+
+            if (WybranaOperacja == "ROZKLAD")
+            {
+                funkcje.RozkadZmian(WalutaA, WalutaB, walutaALista, walutaBLista);
             }
 
             return;
