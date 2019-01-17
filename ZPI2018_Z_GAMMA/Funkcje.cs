@@ -125,7 +125,7 @@ namespace ZPI2018_Z_GAMMA
                 }
             }
 
-            MessageBox.Show("Ilość notowań: " + dane.Count() + " Dominata dla waluty: " + wal + " " + L[indexmax],
+            MessageBox.Show("Ilość notowań: " + dane.Count() + " Dominata dla waluty: " + wal + ": " + L[indexmax],
             "Wynik",
                MessageBoxButtons.OK,
                MessageBoxIcon.Information,
@@ -133,6 +133,20 @@ namespace ZPI2018_Z_GAMMA
             return dane.Count();
 
             return L[indexmax];
+        }
+
+        public float OdchylenieStd(string wal, List<Waluta> dane)
+        {
+            float r = 0;
+            //dane.Sort;
+            r = dane[(dane.Count / 2)].Wartosc;
+            MessageBox.Show("Ilość notowań: " + dane.Count() + " Mediana " + r,
+               "Wynik",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Information,
+               MessageBoxDefaultButton.Button1);
+            return r;
+
         }
 
         public class Waluta

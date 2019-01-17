@@ -113,8 +113,8 @@ namespace ZPI2018_Z_GAMMA
          
             walutaALista = funkcje.getData(WalutaA, IloscDni);
             if(walutaALista.Count() > 0)
-            MessageBox.Show(" " + walutaALista[1].Wartosc,
-                  "Important Note");
+          //  MessageBox.Show(" " + walutaALista[1].Wartosc,
+           //       "Important Note");
 
             if(WybranaOperacja == "ROZKLAD")
             {
@@ -134,6 +134,11 @@ namespace ZPI2018_Z_GAMMA
             if(WybranaOperacja == "DOMINATA")
             {
                 funkcje.Dominata(WalutaA, walutaALista);
+            }
+
+            if (WybranaOperacja == "ODCHYLENIESTD")
+            {
+                funkcje.OdchylenieStd(WalutaA, walutaALista);
             }
 
             return;
