@@ -227,18 +227,18 @@ namespace ZPI2018_Z_GAMMA
 
                 if (a == 0)
                 {
-                    tmpVal = dane[a].Wartosc;
+                    tmpVal = dane[a].Wartosc - dane2[a].Wartosc;
                     continue;
                 }
                 else
                 {
-                    if (tmpVal == dane[a].Wartosc)
+                    if (tmpVal == dane[a].Wartosc - dane2[a].Wartosc)
                         sBezZmian++;
-                    if (tmpVal < dane[a].Wartosc)
+                    if (tmpVal < dane[a].Wartosc -  dane2[a].Wartosc)
                         sWzrost++;
-                    if (tmpVal > dane[a].Wartosc)
+                    if (tmpVal > dane[a].Wartosc - dane2[a].Wartosc)
                         sSpad++;
-                    tmpVal = dane[a].Wartosc;
+                    tmpVal = dane[a].Wartosc - dane2[a].Wartosc;
                 }
             }
 
