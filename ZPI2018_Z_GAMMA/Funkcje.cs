@@ -170,6 +170,50 @@ namespace ZPI2018_Z_GAMMA
             return newValue;
         }
 
+        public int WspZm(string wal, List<Waluta> dane)
+        {
+       
+            int sZmiany = 0;
+            float tmpVal = 0;
+            int dc = dane.Count();
+            for (int a = 0; a < dane.Count(); a++)
+            {
+
+                if (a == 0)
+                {
+                    tmpVal = dane[a].Wartosc;
+                    continue;
+                }
+                else
+                {
+                    if (tmpVal < dane[a].Wartosc)
+                        sZmiany++;
+                    if (tmpVal > dane[a].Wartosc)
+                        sZmiany++;
+                    tmpVal = dane[a].Wartosc;
+                }
+            }
+
+            if (dane.Count() < 2)
+            {
+                MessageBox.Show("Zbyt mała ilośc danych do obliczenia sesji",
+                "Ważne",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button1);
+                return 0;
+            }
+
+            float wspZ = sZmiany / dc;
+
+            MessageBox.Show("Ilość notowań: " + dane.Count() + "Współczynnik zmian: " + wspZ ,
+            "Wynik",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information,
+            MessageBoxDefaultButton.Button1);
+            return dane.Count();
+        }
+
         public class Waluta
         {
             public float Wartosc;
