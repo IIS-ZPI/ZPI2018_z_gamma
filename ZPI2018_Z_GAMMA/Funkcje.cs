@@ -161,7 +161,7 @@ namespace ZPI2018_Z_GAMMA
             doubleValue = Math.Sqrt(doubleValue);
             float newValue = Convert.ToSingle(doubleValue);
 
-            MessageBox.Show("Ilość notowań: " + dane.Count() + " Odchylenie  waluty: " + wal + ": " + L[indexmax],
+            MessageBox.Show("Ilość notowań: " + dane.Count() + " Odchylenie std. dla waluty: " + wal + ": " + newValue,
           "Wynik",
              MessageBoxButtons.OK,
              MessageBoxIcon.Information,
