@@ -168,9 +168,6 @@ namespace ZPI2018_Z_GAMMA
              MessageBoxDefaultButton.Button1);
 
             return newValue;
-
-
-
         }
 
         public class Waluta
