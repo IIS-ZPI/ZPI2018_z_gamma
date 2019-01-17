@@ -80,11 +80,19 @@ namespace ZPI2018_Z_GAMMA
 
         public float Dominata(string wal, List<Waluta> dane)
         {
-            int[] L = { };
+            float [] L = { };
             //tablica liczby wystapien
-            int[] W = { };
-            int[] tab = { 2, 2, 4, 4, 1, 3, 4, 2, 5, 1, 3, 1, 4, 4 };
-   
+            float[] W = { };
+            float[] tab = { 1 };// Wiecej niz 300 nie ma danych dla roku ilosc notowan
+            //loat[] tab = { 2, 2, 4, 4, 1, 3, 4, 2, 5, 1, 3, 1, 4, 4 };
+            Array.Resize(ref tab, dane.Count());
+
+            //Przepisanie danych
+            for (int x = 0; x < dane.Count(); x++)
+            {
+                tab[x] = dane[x].Wartosc;
+            }
+
             //zlicz wystepowanie poszczegolnych liczb w tablicy tab
             for (int i = 0; i < tab.Length; i++)
             {
@@ -106,7 +114,7 @@ namespace ZPI2018_Z_GAMMA
             }
 
             //poszukaj liczbe najczesciej wystepujaca
-            int max = 0;
+            float max = 0;
             int indexmax = 0;
             for (int i = 0; i < W.Length; i++)
             {
@@ -116,6 +124,14 @@ namespace ZPI2018_Z_GAMMA
                     indexmax = i;
                 }
             }
+
+            MessageBox.Show("Ilość notowań: " + dane.Count() + "Dominata " +   L[indexmax],
+            "Wynik",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Information,
+               MessageBoxDefaultButton.Button1);
+            return dane.Count();
+
             return L[indexmax];
         }
 
