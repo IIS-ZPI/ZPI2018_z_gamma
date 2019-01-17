@@ -141,6 +141,11 @@ namespace ZPI2018_Z_GAMMA
                 funkcje.OdchylenieStd(WalutaA, walutaALista);
             }
 
+            if (WybranaOperacja == "WSPOLZMIEN")
+            {
+                funkcje.WspZm(WalutaA, walutaALista);
+            }
+
             return;
 
 
