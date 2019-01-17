@@ -125,7 +125,7 @@ namespace ZPI2018_Z_GAMMA
                 }
             }
 
-            MessageBox.Show("Ilość notowań: " + dane.Count() + "Dominata " +   L[indexmax],
+            MessageBox.Show("Ilość notowań: " + dane.Count() + " Dominata dla waluty: " + wal + " " + L[indexmax],
             "Wynik",
                MessageBoxButtons.OK,
                MessageBoxIcon.Information,
