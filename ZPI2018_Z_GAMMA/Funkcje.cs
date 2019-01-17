@@ -17,6 +17,7 @@ namespace ZPI2018_Z_GAMMA
               MessageBoxButtons.OK,
               MessageBoxIcon.Exclamation,
               MessageBoxDefaultButton.Button1); 
+
         }
 
         public int IloscSesji (string wal, List<Waluta> dane)
