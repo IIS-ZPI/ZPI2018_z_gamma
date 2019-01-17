@@ -130,22 +130,46 @@ namespace ZPI2018_Z_GAMMA
                MessageBoxButtons.OK,
                MessageBoxIcon.Information,
                MessageBoxDefaultButton.Button1);
-            return dane.Count();
 
             return L[indexmax];
         }
 
         public float OdchylenieStd(string wal, List<Waluta> dane)
         {
-            float r = 0;
-            //dane.Sort;
-            r = dane[(dane.Count / 2)].Wartosc;
-            MessageBox.Show("Ilość notowań: " + dane.Count() + " Mediana " + r,
-               "Wynik",
-               MessageBoxButtons.OK,
-               MessageBoxIcon.Information,
-               MessageBoxDefaultButton.Button1);
-            return r;
+
+            float[] tab = { 1 };// Wiecej niz 300 nie ma danych dla roku ilosc notowan
+            Array.Resize(ref tab, dane.Count());
+            float tmp = 0;
+            //Przepisanie danych
+            for (int x = 0; x < dane.Count(); x++)
+            {
+                tab[x] = dane[x].Wartosc;
+            }
+            float average = tab.Average();
+            float sumOfDerivation = 0;
+            for(int u = 0; u < tab.Length; u++ )
+            {
+                tmp = tab[u];
+                sumOfDerivation = sumOfDerivation + (tmp * tmp);
+            }
+            float sumOfDerivationAverage = sumOfDerivation / (dane.Count() - 1);
+            float avg2 = (average * average);
+            float finalF = sumOfDerivationAverage - avg2;
+
+            decimal decimalValue = System.Convert.ToDecimal(finalF);
+            double doubleValue = System.Convert.ToDouble(decimalValue);
+            doubleValue = Math.Sqrt(doubleValue);
+            float newValue = Convert.ToSingle(doubleValue);
+
+            MessageBox.Show("Ilość notowań: " + dane.Count() + " Odchylenie  waluty: " + wal + ": " + L[indexmax],
+          "Wynik",
+             MessageBoxButtons.OK,
+             MessageBoxIcon.Information,
+             MessageBoxDefaultButton.Button1);
+
+            return newValue;
+
+
 
         }
 
