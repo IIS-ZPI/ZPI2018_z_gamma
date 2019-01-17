@@ -217,9 +217,9 @@ namespace ZPI2018_Z_GAMMA
 
         public int RozkadZmian(string wal1, string wal2, List<Waluta> dane,  List<Waluta> dane2)
         {
-            int sSpad = 0;
-            int sBezZmian = 0;
-            int sWzrost = 0;
+       
+
+            int zm = 0;
             float tmpVal = 0;
 
             for (int a = 0; a < dane.Count(); a++)
@@ -232,12 +232,11 @@ namespace ZPI2018_Z_GAMMA
                 }
                 else
                 {
-                    if (tmpVal == dane[a].Wartosc - dane2[a].Wartosc)
-                        sBezZmian++;
+                  
                     if (tmpVal < dane[a].Wartosc -  dane2[a].Wartosc)
-                        sWzrost++;
+                        zm++;
                     if (tmpVal > dane[a].Wartosc - dane2[a].Wartosc)
-                        sSpad++;
+                        zm++;
                     tmpVal = dane[a].Wartosc - dane2[a].Wartosc;
                 }
             }
@@ -252,7 +251,7 @@ namespace ZPI2018_Z_GAMMA
                 return 0;
             }
 
-            MessageBox.Show("Ilość notowań: " + dane.Count() + " Sesje rosnące: " + sWzrost + " sesje malejące " + sSpad + " sesje bez zmian " + sBezZmian,
+            MessageBox.Show("Ilość notowań: " + dane.Count() + " Ilość zmian dla walut : " + wal1 + " / " + wal2 + " " + zm,
             "Wynik",
             MessageBoxButtons.OK,
             MessageBoxIcon.Information,
