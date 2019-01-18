@@ -206,7 +206,7 @@ namespace ZPI2018_Z_GAMMA
 
             float wspZ = sZmiany / dc;
 
-            MessageBox.Show("Ilość notowań: " + dane.Count() + "Współczynnik zmian: " + sZmiany + " / " + dc,
+            MessageBox.Show("Ilość notowań: " + dane.Count() + " Współczynnik zmian: " + sZmiany + " / " + dc,
             "Wynik",
             MessageBoxButtons.OK,
             MessageBoxIcon.Information,
