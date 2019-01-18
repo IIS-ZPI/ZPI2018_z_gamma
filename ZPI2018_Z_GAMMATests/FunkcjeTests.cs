@@ -65,7 +65,24 @@ namespace ZPI2018_Z_GAMMA.Tests
         [TestMethod()]
         public void DominataTest()
         {
-            Assert.Fail();
+            float expected = 5;
+            float actual = 0;
+            Funkcje f = new Funkcje();
+            Funkcje.Waluta itm = new Funkcje.Waluta();
+            List<Funkcje.Waluta> w = new List<Funkcje.Waluta>();
+            itm.Wartosc = 1;
+            w.Add(itm);
+            itm.Wartosc = 2;
+            w.Add(itm);
+            itm.Wartosc = 2;
+            w.Add(itm);
+            itm.Wartosc = 3;
+            w.Add(itm);
+            itm.Wartosc = 3;
+            w.Add(itm);
+            expected = 3;
+            actual = f.Dominata("ANY", w);
+            Assert.AreEqual(expected, actual, 0, "Żle liczona Mediana");
         }
 
         [TestMethod()]
