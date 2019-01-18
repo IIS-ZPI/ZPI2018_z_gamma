@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4705483A-466B-4A25-8C9F-C0A00D1B77FC}</ProjectGuid>
+    <ProjectGuid>{F328F843-9CF1-473E-A7ED-D5714DA23E2F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ZPI2018_Z_GAMMATests</RootNamespace>
