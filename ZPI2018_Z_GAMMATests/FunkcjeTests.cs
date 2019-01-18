@@ -1,19 +1,14 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ZPI2018_Z_GAMMA;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ZPI2018_Z_GAMMA.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class FunkcjeTests
     {
 
 
-        [TestMethod()]
+        [TestMethod]
         public void IloscSesjiTest()
         {
 
@@ -37,7 +32,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             Assert.AreEqual(expected, actual, 0, "Żle liczona Mediana");
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void MedianaTest()
         {
 
@@ -62,7 +57,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             //Assert.Fail();
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void DominataTest()
         {
             float expected = 5;
@@ -85,7 +80,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             Assert.AreEqual(expected, actual, 0, "Żle liczona Dominta");
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void OdchylenieStdTest()
         {
             double expected = 5;
@@ -108,7 +103,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             Assert.AreEqual(expected, actual, 0, "OdchStd");
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void WspZmTest()
         {
             float expected = 5;
@@ -131,7 +126,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             Assert.AreEqual(expected, actual, 0, "WspZM");
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void RozkadZmianTest()
         {
 
@@ -164,12 +159,12 @@ namespace ZPI2018_Z_GAMMA.Tests
             w2.Add(itm);
 
             expected = 5;
-            actual = f.RozkadZmian("ANY","ANY2", w, w2);
+            actual = f.RozkadZmian("ANY", "ANY2", w, w2);
             Assert.AreEqual(expected, actual, 0, "WspZM");
-            
+
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void getDataTest()
         {
             //Assert.Fail();
