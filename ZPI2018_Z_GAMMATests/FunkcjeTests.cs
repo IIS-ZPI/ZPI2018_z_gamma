@@ -82,13 +82,30 @@ namespace ZPI2018_Z_GAMMA.Tests
             w.Add(itm);
             expected = 3;
             actual = f.Dominata("ANY", w);
-            Assert.AreEqual(expected, actual, 0, "Żle liczona Mediana");
+            Assert.AreEqual(expected, actual, 0, "Żle liczona Dominta");
         }
 
         [TestMethod()]
         public void OdchylenieStdTest()
         {
-            Assert.Fail();
+            double expected = 5;
+            double actual = 0;
+            Funkcje f = new Funkcje();
+            Funkcje.Waluta itm = new Funkcje.Waluta();
+            List<Funkcje.Waluta> w = new List<Funkcje.Waluta>();
+            itm.Wartosc = 1;
+            w.Add(itm);
+            itm.Wartosc = 2;
+            w.Add(itm);
+            itm.Wartosc = 2;
+            w.Add(itm);
+            itm.Wartosc = 3;
+            w.Add(itm);
+            itm.Wartosc = 3;
+            w.Add(itm);
+            expected = 1.5;
+            actual = f.OdchylenieStd("ANY", w);
+            Assert.AreEqual(expected, actual, 0, "OdchStd");
         }
 
         [TestMethod()]
