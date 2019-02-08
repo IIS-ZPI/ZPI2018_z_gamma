@@ -1,12 +1,14 @@
 ﻿using NUnit.Framework;
 using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace ZPI2018_Z_GAMMA.Tests
 {
     [TestFixture]
     public class FunkcjeTests
     {
-        [Test]
+        [Test, MaxTime(50)]
         public void IloscSesjiTest()
         {
             float expected = 5;
@@ -29,7 +31,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             Assert.AreEqual(expected, actual, 0, "Żle liczona Mediana");
         }
 
-        [Test]
+        [Test, MaxTime(50)]
         public void MedianaTest()
         {
 
@@ -54,7 +56,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             //Assert.Fail();
         }
 
-        [Test]
+        [Test, MaxTime(50)]
         public void DominataTest()
         {
             float expected = 5;
@@ -77,7 +79,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             Assert.AreEqual(expected, actual, 0, "Żle liczona Dominta");
         }
 
-        [Test]
+        [Test, MaxTime(50)]
         public void OdchylenieStdTest()
         {
             double expected = 5;
@@ -100,7 +102,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             Assert.AreEqual(expected, actual, 0, "OdchStd");
         }
 
-        [Test]
+        [Test, MaxTime(50)]
         public void WspZmTest()
         {
             float expected = 5;
@@ -123,7 +125,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             Assert.AreEqual(expected, actual, 0, "WspZM");
         }
 
-        [Test]
+        [Test, MaxTime(50)]
         public void RozkadZmianTest()
         {
 
@@ -161,10 +163,25 @@ namespace ZPI2018_Z_GAMMA.Tests
 
         }
 
-        [Test]
+        [Test, MaxTime(2000)]
         public void getDataTest()
         {
-            //Assert.Fail();
+            /*List<Funkcje.Waluta> list = new List<Funkcje.Waluta>();
+            string wal = null;
+            string dni = null;
+            string link = "http://api.nbp.pl/api/exchangerates/rates/A/" + wal + "/last/" + dni + "?format=xml";
+
+            XDocument xDoc = XDocument.Load(link);
+            list = xDoc.Descendants("Rate")
+                    .Select(o => new Funkcje.Waluta
+                    {
+                        Wartosc = (float)o.Element("Mid"),
+                    })
+                    .ToList();
+            int lc = list.Count();
+            string str = lc.ToString();
+            */
+            
             Assert.AreEqual(1, 1, 0, "WspZM");// Nie testujemy
         }
     }
