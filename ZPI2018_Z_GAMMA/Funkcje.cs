@@ -1,32 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace ZPI2018_Z_GAMMA
 {
     public class Funkcje
     {
-        public void myMessage(string v)
-        {
-            MessageBox.Show(v,
-              "Important Note",
-              MessageBoxButtons.OK,
-              MessageBoxIcon.Exclamation,
-              MessageBoxDefaultButton.Button1); 
-        }
-
-        public int IloscSesji (string wal, List<Waluta> dane)
+        public int IloscSesji(string wal, List<Waluta> dane)
         {
             int sSpad = 0;
             int sBezZmian = 0;
             int sWzrost = 0;
             float tmpVal = 0;
 
-            for (int a= 0; a < dane.Count(); a++)
+            for (int a = 0; a < dane.Count(); a++)
             {
 
                 if (a == 0)
@@ -48,20 +36,21 @@ namespace ZPI2018_Z_GAMMA
 
             if (dane.Count() < 2)
             {
-                 MessageBox.Show("Zbyt mała ilośc danych do obliczenia sesji",
-                 "Ważne",
-                 MessageBoxButtons.OK,
-                 MessageBoxIcon.Exclamation,
-                 MessageBoxDefaultButton.Button1);
+                //MessageBox.Show("Zbyt mała ilośc danych do obliczenia sesji",
+                //"Ważne",
+                //MessageBoxButtons.OK,
+                //MessageBoxIcon.Exclamation,
+                //MessageBoxDefaultButton.Button1);
                 return 0;
             }
 
-                MessageBox.Show("Ilość notowań: " + dane.Count() + " Sesje rosnące: " + sWzrost + " sesje malejące " + sSpad + " sesje bez zmian " + sBezZmian,
-                "Wynik",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information,
-                MessageBoxDefaultButton.Button1);
-                return dane.Count();
+            //MessageBox.Show("Ilość notowań: " + dane.Count() + " Sesje rosnące: " + sWzrost + " sesje malejące " + sSpad + " sesje bez zmian " + sBezZmian,
+            //"Wynik",
+            //MessageBoxButtons.OK,
+            //MessageBoxIcon.Information,
+            //MessageBoxDefaultButton.Button1);
+
+            return dane.Count();
         }
 
         public float Mediana(string wal, List<Waluta> dane)
@@ -69,18 +58,18 @@ namespace ZPI2018_Z_GAMMA
             float r = 0;
             //dane.Sort;
             r = dane[(dane.Count / 2)].Wartosc;
-            MessageBox.Show("Ilość notowań: " + dane.Count() + " Mediana " + r,
-               "Wynik",
-               MessageBoxButtons.OK,
-               MessageBoxIcon.Information,
-               MessageBoxDefaultButton.Button1);
+            //MessageBox.Show("Ilość notowań: " + dane.Count() + " Mediana " + r,
+            //   "Wynik",
+            //   MessageBoxButtons.OK,
+            //   MessageBoxIcon.Information,
+            //   MessageBoxDefaultButton.Button1);
             return r;
 
         }
 
         public float Dominata(string wal, List<Waluta> dane)
         {
-            float [] L = { };
+            float[] L = { };
             //tablica liczby wystapien
             float[] W = { };
             float[] tab = { 1 };// Wiecej niz 300 nie ma danych dla roku ilosc notowan
@@ -125,11 +114,11 @@ namespace ZPI2018_Z_GAMMA
                 }
             }
 
-            MessageBox.Show("Ilość notowań: " + dane.Count() + " Dominata dla waluty: " + wal + ": " + L[indexmax],
-            "Wynik",
-               MessageBoxButtons.OK,
-               MessageBoxIcon.Information,
-               MessageBoxDefaultButton.Button1);
+            //MessageBox.Show("Ilość notowań: " + dane.Count() + " Dominata dla waluty: " + wal + ": " + L[indexmax],
+            //"Wynik",
+            //   MessageBoxButtons.OK,
+            //   MessageBoxIcon.Information,
+            //   MessageBoxDefaultButton.Button1);
 
             return L[indexmax];
         }
@@ -147,7 +136,7 @@ namespace ZPI2018_Z_GAMMA
             }
             float average = tab.Average();
             float sumOfDerivation = 0;
-            for(int u = 0; u < tab.Length; u++ )
+            for (int u = 0; u < tab.Length; u++)
             {
                 tmp = tab[u];
                 sumOfDerivation = sumOfDerivation + (tmp * tmp);
@@ -161,18 +150,18 @@ namespace ZPI2018_Z_GAMMA
             doubleValue = Math.Sqrt(doubleValue);
             float newValue = Convert.ToSingle(doubleValue);
 
-            MessageBox.Show("Ilość notowań: " + dane.Count() + " Odchylenie std. dla waluty: " + wal + ": " + newValue,
-          "Wynik",
-             MessageBoxButtons.OK,
-             MessageBoxIcon.Information,
-             MessageBoxDefaultButton.Button1);
+            //  MessageBox.Show("Ilość notowań: " + dane.Count() + " Odchylenie std. dla waluty: " + wal + ": " + newValue,
+            //"Wynik",
+            //   MessageBoxButtons.OK,
+            //   MessageBoxIcon.Information,
+            //   MessageBoxDefaultButton.Button1);
 
             return newValue;
         }
 
         public int WspZm(string wal, List<Waluta> dane)
         {
-       
+
             int sZmiany = 0;
             float tmpVal = 0;
             int dc = dane.Count();
@@ -196,28 +185,28 @@ namespace ZPI2018_Z_GAMMA
 
             if (dane.Count() < 2)
             {
-                MessageBox.Show("Zbyt mała ilośc danych do obliczenia sesji",
-                "Ważne",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Exclamation,
-                MessageBoxDefaultButton.Button1);
+                //MessageBox.Show("Zbyt mała ilośc danych do obliczenia sesji",
+                //"Ważne",
+                //MessageBoxButtons.OK,
+                //MessageBoxIcon.Exclamation,
+                //MessageBoxDefaultButton.Button1);
                 return 0;
             }
 
             float wspZ = sZmiany / dc;
 
-            MessageBox.Show("Ilość notowań: " + dane.Count() + " Współczynnik zmian: " + sZmiany + " / " + dc,
-            "Wynik",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Information,
-            MessageBoxDefaultButton.Button1);
+            //MessageBox.Show("Ilość notowań: " + dane.Count() + " Współczynnik zmian: " + sZmiany + " / " + dc,
+            //"Wynik",
+            //MessageBoxButtons.OK,
+            //MessageBoxIcon.Information,
+            //MessageBoxDefaultButton.Button1);
             return dane.Count();
         }
 
 
-        public int RozkadZmian(string wal1, string wal2, List<Waluta> dane,  List<Waluta> dane2)
+        public int RozkadZmian(string wal1, string wal2, List<Waluta> dane, List<Waluta> dane2)
         {
-       
+
 
             int zm = 0;
             float tmpVal = 0;
@@ -232,8 +221,8 @@ namespace ZPI2018_Z_GAMMA
                 }
                 else
                 {
-                  
-                    if (tmpVal < dane[a].Wartosc -  dane2[a].Wartosc)
+
+                    if (tmpVal < dane[a].Wartosc - dane2[a].Wartosc)
                         zm++;
                     if (tmpVal > dane[a].Wartosc - dane2[a].Wartosc)
                         zm++;
@@ -243,19 +232,19 @@ namespace ZPI2018_Z_GAMMA
 
             if (dane.Count() < 2)
             {
-                MessageBox.Show("Zbyt mała ilośc danych do obliczenia sesji",
-                "Ważne",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Exclamation,
-                MessageBoxDefaultButton.Button1);
+                //MessageBox.Show("Zbyt mała ilośc danych do obliczenia sesji",
+                //"Ważne",
+                //MessageBoxButtons.OK,
+                //MessageBoxIcon.Exclamation,
+                //MessageBoxDefaultButton.Button1);
                 return 0;
             }
 
-            MessageBox.Show("Ilość notowań: " + dane.Count() + " Ilość zmian dla walut : " + wal1 + " / " + wal2 + " " + zm,
-            "Wynik",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Information,
-            MessageBoxDefaultButton.Button1);
+            //MessageBox.Show("Ilość notowań: " + dane.Count() + " Ilość zmian dla walut : " + wal1 + " / " + wal2 + " " + zm,
+            //"Wynik",
+            //MessageBoxButtons.OK,
+            //MessageBoxIcon.Information,
+            //MessageBoxDefaultButton.Button1);
             return dane.Count();
         }
 
@@ -264,13 +253,13 @@ namespace ZPI2018_Z_GAMMA
             public float Wartosc;
         }
 
-        public List<Waluta> getData( string wal, string dni)
+        public List<Waluta> getData(string wal, string dni)
         {
             List<Waluta> list = new List<Waluta>();
             try
             {
                 string link = "http://api.nbp.pl/api/exchangerates/rates/A/" + wal + "/last/" + dni + "?format=xml";
-              
+
 
                 XDocument xDoc = XDocument.Load(link);
                 list = xDoc.Descendants("Rate")
@@ -282,15 +271,15 @@ namespace ZPI2018_Z_GAMMA
                 int lc = list.Count();
                 string str = lc.ToString();
 
-             
+
             }
             catch
             {
-                MessageBox.Show("Nie mozna wygenerować danych",
-                " ",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Exclamation,
-                MessageBoxDefaultButton.Button1);
+                //MessageBox.Show("Nie mozna wygenerować danych",
+                //" ",
+                //MessageBoxButtons.OK,
+                //MessageBoxIcon.Exclamation,
+                //MessageBoxDefaultButton.Button1);
             }
             return list;
         }
