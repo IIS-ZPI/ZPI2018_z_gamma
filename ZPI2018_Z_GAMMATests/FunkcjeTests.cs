@@ -1,15 +1,14 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using System.Collections.Generic;
 
 namespace ZPI2018_Z_GAMMA.Tests
 {
-    [TestClass]
+    [TestFixture]
     public class FunkcjeTests
     {
-        [TestMethod]
+        [Test]
         public void IloscSesjiTest()
         {
-
             float expected = 5;
             float actual = 0;
             Funkcje f = new Funkcje();
@@ -30,7 +29,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             Assert.AreEqual(expected, actual, 0, "Żle liczona Mediana");
         }
 
-        [TestMethod]
+        [Test]
         public void MedianaTest()
         {
 
@@ -55,7 +54,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             //Assert.Fail();
         }
 
-        [TestMethod]
+        [Test]
         public void DominataTest()
         {
             float expected = 5;
@@ -78,7 +77,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             Assert.AreEqual(expected, actual, 0, "Żle liczona Dominta");
         }
 
-        [TestMethod]
+        [Test]
         public void OdchylenieStdTest()
         {
             double expected = 5;
@@ -101,7 +100,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             Assert.AreEqual(expected, actual, 0, "OdchStd");
         }
 
-        [TestMethod]
+        [Test]
         public void WspZmTest()
         {
             float expected = 5;
@@ -124,7 +123,7 @@ namespace ZPI2018_Z_GAMMA.Tests
             Assert.AreEqual(expected, actual, 0, "WspZM");
         }
 
-        [TestMethod]
+        [Test]
         public void RozkadZmianTest()
         {
 
@@ -162,7 +161,7 @@ namespace ZPI2018_Z_GAMMA.Tests
 
         }
 
-        [TestMethod]
+        [Test]
         public void getDataTest()
         {
             //Assert.Fail();
